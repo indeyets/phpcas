@@ -1605,7 +1605,7 @@ class CASClient
 		}
 		
 		// create the storage object
-		$this->_pgt_storage = &new PGTStorageFile($this,$format,$path);
+		$this->_pgt_storage = new PGTStorageFile($this,$format,$path);
 		}
 	
 	/**
@@ -1642,7 +1642,7 @@ class CASClient
 		trigger_error('PGT storage into database is an experimental feature, use at your own risk',E_USER_WARNING);
 		
 		// create the storage object
-		$this->_pgt_storage = & new PGTStorageDB($this,$user,$password,$database_type,$hostname,$port,$database,$table);
+		$this->_pgt_storage = new PGTStorageDB($this,$user,$password,$database_type,$hostname,$port,$database,$table);
 		}
 	
 	// ########################################################################
